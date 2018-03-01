@@ -112,7 +112,7 @@ void LBLEAdvertisementData::configAsEddystoneURL(EDDYSTONE_URL_PREFIX prefix,
 
     // populate AD according to Eddystone spec:
     // https://github.com/google/eddystone/blob/master/protocol-specification.md
-    LBLEAdvDataItem item;
+    static LBLEAdvDataItem item;
 
     // Advtertisement type flag
     addFlag(BT_GAP_LE_AD_FLAG_BR_EDR_NOT_SUPPORTED | BT_GAP_LE_AD_FLAG_GENERAL_DISCOVERABLE);
